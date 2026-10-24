@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: shopify-checker-api
+    runtime: docker
+    dockerfilePath: ./Dockerfile
+    plan: starter
+    region: oregon
+    envVars:
+      - key: PORT
+        value: "8081"
+    healthCheckPath: /
